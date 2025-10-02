@@ -127,20 +127,20 @@ resource "aws_security_group_rule" "api_http_from_web" {
 # Allow HTTP from home IP to API server
 resource "aws_security_group_rule" "api_http_from_home" {
   type              = "ingress"
-  from_port         = 80              # HTTP port
+  from_port         = 80 # HTTP port
   to_port           = 80
   protocol          = "tcp"
-  cidr_blocks       = [var.home_ip]   # your home IP in CIDR format, e.g., "77.251.14.120/32"
+  cidr_blocks       = [var.home_ip] # your home IP in CIDR format, e.g., "77.251.14.120/32"
   security_group_id = aws_security_group.api_sg.id
 }
 
 # Allow HTTP from home IP to API server
 resource "aws_security_group_rule" "api_ssh_from_home" {
   type              = "ingress"
-  from_port         = 22              # HTTP port
+  from_port         = 22 # HTTP port
   to_port           = 22
   protocol          = "tcp"
-  cidr_blocks       = [var.home_ip]   # your home IP in CIDR format, e.g., "77.251.14.120/32"
+  cidr_blocks       = [var.home_ip] # your home IP in CIDR format, e.g., "77.251.14.120/32"
   security_group_id = aws_security_group.api_sg.id
 }
 

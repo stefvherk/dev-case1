@@ -9,9 +9,9 @@ resource "aws_vpc" "demo_vpc" {
 }
 
 resource "aws_subnet" "demo_subnet" {
-  vpc_id            = aws_vpc.demo_vpc.id
-  cidr_block        = var.subnet_cidr
-  availability_zone = var.az
+  vpc_id                  = aws_vpc.demo_vpc.id
+  cidr_block              = var.subnet_cidr
+  availability_zone       = var.az
   map_public_ip_on_launch = true
 
   tags = {
@@ -20,9 +20,9 @@ resource "aws_subnet" "demo_subnet" {
 }
 
 resource "aws_subnet" "demo_subnet_b" {
-  vpc_id            = aws_vpc.demo_vpc.id
-  cidr_block        = var.subnet_cidr2
-  availability_zone = var.az2
+  vpc_id                  = aws_vpc.demo_vpc.id
+  cidr_block              = var.subnet_cidr2
+  availability_zone       = var.az2
   map_public_ip_on_launch = true
 
   tags = {

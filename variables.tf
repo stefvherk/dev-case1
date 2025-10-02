@@ -3,7 +3,7 @@
 variable "region" {
   description = "Region"
   type        = string
-  default     = "eu-central-1" 
+  default     = "eu-central-1"
 }
 
 // SSH key
@@ -16,7 +16,7 @@ variable "ssh_key" {
 variable "EC2_image" {
   description = "EC2_image"
   type        = string
-  default     = "ubuntu/images/hvm-ssd/ubuntu*22.04*" 
+  default     = "ubuntu/images/hvm-ssd/ubuntu*22.04*"
 }
 
 // Security
