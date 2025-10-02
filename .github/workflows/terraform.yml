@@ -30,17 +30,17 @@ jobs:
           terraform_version: 1.8.5
 
       - name: Terraform Init
-        run: terraform -chdir=tf init
+        run: terraform init
 
       - name: Terraform Format
-        run: terraform -chdir=tf fmt -check
+        run: terraform fmt -check
 
       - name: Terraform Validate
-        run: terraform -chdir=tf validate
+        run: terraform validate
 
       - name: Terraform Plan
-        run: terraform -chdir=tf plan -out=tfplan
+        run: terraform plan -out=tfplan
 
       - name: Terraform Apply
         if: github.ref == 'refs/heads/main'
-        run: terraform -chdir=tf apply -auto-approve tfplan
+        run: terraform apply -auto-approve tfplan
